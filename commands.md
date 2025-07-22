@@ -76,21 +76,6 @@ echo "Wazuh test email body" | mail -s "Test from Wazuh Server" recipient@gmail.
 
 ---
 
-## Step 5: Configure Wazuh to Use `mail`
-
-Wazuh sends alerts using the system `mail` command. Now that `msmtp` handles that command, Wazuh will use it by default.
-
-
-```xml
-<email_notification>yes</email_notification>
-<email_to>recipient@gmail.com</email_to>
-<email_from>recipient@gmail.com</email_from>
-```
-
-> Replace `recipient@gmail.com` with your actual email address.
-
----
-
 ## ✅ Done
 
 Wazuh is now set to send alerts via Gmail using `msmtp`.
